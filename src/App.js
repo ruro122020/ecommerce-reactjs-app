@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+//styles sheets must be imported in certain order. Place css files based on what needs to be loaded first.
+import "./LayoutStyles/mobile/Nav.css";
+import "./LayoutStyles/mobile/Door.css";
+import "./LayoutStyles/mobile/App.css";
+
 import footStepsEffect from "./assets/audio/footsteps3min.wav";
 import doorEffect from "./assets/audio/door.wav";
+import Cakes from "./components/cakes/Cakes";
+import Pastries from "./components/pastries/Pastries";
 
 function App() {
   const [openDoor, setOpenDoor] = useState(false);
@@ -10,10 +18,10 @@ function App() {
 
   const toggleDoor = () => {
     openDoor ? setOpenDoor(false) : setOpenDoor(true);
-    playSound();
+    playSounds();
   };
 
-  const playSound = () => {
+  const playSounds = () => {
     door.play();
     setTimeout(() => {
       footsteps.play();
@@ -27,27 +35,32 @@ function App() {
       >
         <div className="door_wrapper">
           <div className={openDoor ? "back_door expand" : "back_door"}>
-            <div className="shelf_wrapper">
-              <div className="shelfs">
-                <div className="shelf1">
-                  {/* add a navigation bar that breaks down products by category */}
+            <div className="nav-shelf">
+              <Router>
+                <div className="nav_wrapper">
+                  <Nav className="navs">
+                    <Nav.Item className="nav">
+                      <Nav.Link className="a" as={Link} to="/pastries">
+                        Pastries
+                      </Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item className="nav">
+                      <Nav.Link className="a" as={Link} to="/cakes">
+                        Cakes
+                      </Nav.Link>
+                    </Nav.Item>
+                  </Nav>
+
+                  <Switch>
+                    <Route path="/pastries">
+                      <Pastries />
+                    </Route>
+                    <Route path="/cakes">
+                      <Cakes />
+                    </Route>
+                  </Switch>
                 </div>
-                <div className="shelf2">
-                  {/* products of category selected */}
-                </div>
-                <div className="shelf3">
-                  {/* products of category selected */}
-                </div>
-                <div className="shelf4">
-                  {/* products of category selected */}
-                </div>
-                <div className="shelf5">
-                  {/* products of category selected */}
-                </div>
-                <div className="shopping_bag_wrapper">
-                  <div className="shopping_bag"></div>
-                </div>
-              </div>
+              </Router>
             </div>
 
             <div

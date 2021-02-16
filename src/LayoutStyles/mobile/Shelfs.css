@@ -1,0 +1,52 @@
+/* Once inside store*/
+.shelf_wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+}
+.shelfs {
+  height: 100%;
+  padding: 10px;
+}
+.shelf1 {
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: 10%;
+  border: 2px solid green;
+  position: relative;
+}
+.shelf2 {
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: 10%;
+  border: 2px solid green;
+  position: relative;
+  margin-top: 25px;
+}
+.shelf3 {
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: 10%;
+  border: 2px solid green;
+  position: relative;
+  margin-top: 5px;
+}
+.shelf4 {
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: 10%;
+  border: 2px solid green;
+  position: relative;
+  margin-top: 5px;
+}
+.shelf5 {
+  z-index: 1;
+  width: calc(100% - 4px);
+  height: 10%;
+  border: 2px solid green;
+  position: relative;
+  margin-top: 5px;
+}
+/*********************/
