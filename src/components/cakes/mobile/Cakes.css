@@ -1,0 +1,32 @@
+.cakes_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 127px;
+  background-color: grey;
+  overflow-y: scroll;
+}
+
+.cake {
+  border: 1px solid orange;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+span {
+  font-size: 5px;
+}
+
+img {
+  width: 15px;
+  height: 15px;
+}
