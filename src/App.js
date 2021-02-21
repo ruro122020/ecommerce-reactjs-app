@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
+import footStepsEffect from "./assets/audio/footsteps3min.wav";
+import doorEffect from "./assets/audio/door.wav";
+import Cakes from "./container/cakes/Cakes";
+import Pastries from "./container/pastries/Pastries";
 //styles sheets must be imported in certain order. Place css files based on what needs to be loaded first.
 import "./LayoutStyles/mobile/Nav.css";
 import "./LayoutStyles/mobile/Door.css";
 import "./LayoutStyles/mobile/App.css";
-
-import footStepsEffect from "./assets/audio/footsteps3min.wav";
-import doorEffect from "./assets/audio/door.wav";
-import Cakes from "./components/cakes/Cakes";
-import Pastries from "./components/pastries/Pastries";
-
 function App() {
   const [openDoor, setOpenDoor] = useState(false);
   const door = new Audio(doorEffect);
