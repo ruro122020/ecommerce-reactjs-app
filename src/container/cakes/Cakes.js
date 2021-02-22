@@ -97,36 +97,3 @@ const Cakes = () => {
 };
 
 export default Cakes;
-// <div className="slider">
-//   {cakes.map((cake, i) => {
-//     return (
-//       <div key={i} className="sliderContent">
-//         <div className="slide">
-//           <div className="wrapper">
-//             <img className="img" src={cakeImg} />
-//           </div>
-//           <div className="wrapper">
-//             <span>name</span>
-//           </div>
-//           <div className="wrapper">
-//             <span>decription</span>
-//           </div>
-//           <div className="wrapper">
-//             <span>price</span>
-//           </div>
-//           <div className="wrapper">
-//             <span>in stock</span>
-//           </div>
-
-//           <div className="meter_button_wrapper">
-//             <div className="meter">
-//               dots meter to show how many more swipes you have left
-//             </div>
-//             <button>left arrow</button>
-//             <button>right arrow</button>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   })}
-// </div>
