@@ -1,7 +1,37 @@
-.img {
-  background: black !important;
+carousel_wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
+.productName {
+  font-size: 12px;
+}
 h3 {
   font-size: 10px;
+}
+
+button {
+  border: 0.5px solid blue;
+  border-radius: 2px;
+  width: 37px;
+  height: 14px;
+  font-size: 12px;
+  position: relative;
+  bottom: 6px;
+  background: skyblue;
+}
+span {
+  font-size: 7px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.caption {
+  width: 72%;
+  position: relative;
+  left: 14%;
 }

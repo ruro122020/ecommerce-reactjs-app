@@ -28,12 +28,16 @@ const Pastries = () => {
       <Carousel interval={null}>
         {pastries.map((pastry, i) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={i}>
               <img className="w-50" height="50" src={croissant} />
-
-              <h3>{pastry.name}</h3>
-              <p>{pastry.description}</p>
-              <p>${pastry.price}.00</p>
+              <div className="caption">
+                <p className="productName">{pastry.name}</p>
+                <p>{pastry.description}</p>
+                <p>${pastry.price}.00</p>
+                <button>
+                  <span>purchase</span>
+                </button>
+              </div>
             </Carousel.Item>
           );
         })}

@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import cakeImg from "../../assets/images/cake.jpg";
+
 import "./mobile/Cakes.css";
 
 const cakes = [
@@ -83,7 +83,7 @@ const Cakes = () => {
         {cakes.map((cake, i) => {
           return (
             <Carousel.Item key={i} className="card">
-              <img className="img" src={cakeImg} alt="First slide" />
+              {/* <img className="img" alt="First slide" /> */}
               <Carousel.Caption>
                 <p>name of picture</p>
                 <p>price</p>
