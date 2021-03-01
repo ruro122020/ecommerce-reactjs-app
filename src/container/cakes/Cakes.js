@@ -84,10 +84,12 @@ const Cakes = () => {
           return (
             <Carousel.Item key={i} className="card">
               <img className="img" src={cakeImg} alt="First slide" />
-              <p>name of picture</p>
-              <p>price</p>
-              <p>description</p>
-              <p>#Stock</p>
+              <Carousel.Caption>
+                <p>name of picture</p>
+                <p>price</p>
+                <p>description</p>
+                <p>#Stock</p>
+              </Carousel.Caption>
             </Carousel.Item>
           );
         })}

@@ -20,9 +20,6 @@ p {
   width: 50%;
   height: 50%;
 }
-.carousel-control-next,
-.carousel-control-prev {
-}
 
 .carousel > ol > li {
   background-color: darkgray;

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 import footStepsEffect from "./assets/audio/footsteps3min.wav";
@@ -9,6 +10,7 @@ import Pastries from "./container/pastries/Pastries";
 import "./LayoutStyles/mobile/Nav.css";
 import "./LayoutStyles/mobile/Door.css";
 import "./LayoutStyles/mobile/App.css";
+
 function App() {
   const [openDoor, setOpenDoor] = useState(false);
   const door = new Audio(doorEffect);
